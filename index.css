@@ -1,0 +1,192 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;  
+
+}
+.wlc-page{
+    background: rgb(247, 118, 32);
+    position: relative;
+    top: 100px;
+    height: 70vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "a a a a"
+                         "b b c c"
+                         "d d c c"
+                         "e e e e";
+    margin: auto;
+    padding: 15px;                    
+}
+
+.wlc-note-1{
+    grid-area: a;
+    text-align: center;
+    text-shadow: 0 0 8px black;
+}
+
+.wlc-note-1 h1{
+    color:  white;
+}
+
+.wlc-note-box{
+    grid: b;
+    border: 0px solid gray;
+    border-radius: 10px;
+    background: white;
+    height: 20vh;
+    width: 100%;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    
+}
+
+.wlc-note-box2{
+    grid-area:  c;
+    background: #131313;
+    color: rgb(247, 118, 32);
+    height: 35vh;
+    max-height: 280px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px black;
+}
+.wlc-note-2{
+    grid-area: d;
+    text-align: left;
+    height: auto;
+    width: 56%;
+    min-width: 226px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-top: -50px;
+
+
+    
+}
+.wlc-note-3{
+    grid-area: e;
+    border: 1px solid black;
+    color: #131313;
+    text-align: center;
+    align-self: center;
+    margin-top: 5px;
+    padding: 7px 5px
+
+}
+
+.footer-section{
+    background: #131313;
+    height: 18vh;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+
+}
+
+.footer-icons{
+
+}
+
+.footer-img-fb{
+
+}
+
+.footer-img-gmail{
+
+}
+
+.footer-img-ig{
+
+}
+
+.footer-section h1 {
+    color: azure;
+    text-align: center;
+    
+}
+
+
+
+@media (max-width: 952px){
+    body{
+        background: rgb(247, 118, 32);
+    }
+}
+
+@media (max-width: 775px){
+    .wlc-page{
+        background: rgb(247, 118, 32);
+        position: relative;
+        top: 100px;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+        padding: 15px;                    
+    }
+    
+    .wlc-note-1{
+        order: 1;
+        grid-area: a;
+        text-align: center;
+        color: white;
+        
+    }
+    
+    .wlc-note-box{
+        order: 2;
+        grid: b;
+        border: 0px solid gray;
+        border-radius: 10px;
+        background: white;
+        height: 20vh;
+        width: 60%;
+        min-width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+    
+    .wlc-note-box2{
+        order: 4;
+        background: #131313;
+        color: rgb(247, 118, 32);
+        height: 35vh;
+        width: 90%;
+        margin-top: 25px;
+       
+    }
+    .wlc-note-2{
+        order: 3;
+        text-align: center;
+        margin-top: 10px;
+        
+    }
+    .wlc-note-3{
+
+        order: 5;
+        border: 1px solid black;
+        text-align: center;
+        align-self: center;
+        margin-top: 30px;
+        padding: 10px 5.5px;
+    
+    }
+}

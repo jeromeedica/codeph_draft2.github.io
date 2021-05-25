@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="try.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+</head>
+<body>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+       <label class="logo">[CODEph]</label>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="try.html">Try</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="story.html">story</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </nav>
+
+
+  
+<div class="main-container">
+    <h1>code <span>editor</span></h1>
+    <div class="code-area">
+    <textarea id="htmlCode" placeholder="HTML Code" 
+                oninput="showPreview()"></textarea>
+    <textarea id="cssCode" placeholder="CSS Code" 
+                oninput="showPreview()">h1{color:orange;}</textarea>			
+    </div>
+    <div class="preview-area">
+    <iframe id="preview-window"></iframe>
+    </div>
+</div>
+    <script>
+        
+function showPreview(){
+  var htmlCode = document.getElementById("htmlCode").value;
+  var cssCode = "<style>"+document.getElementById("cssCode").value+"</style>";
+  var frame = document.getElementById("preview-window").contentWindow.document;
+  frame.open();
+  frame.write(htmlCode+cssCode);
+  frame.close();
+}
+    </script>
